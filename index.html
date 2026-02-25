@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>General Psychology Flash Cards</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header class="app__header">
+        <h1>General Psychology Flash Cards</h1>
+        <p>Choose a chapter, flip cards, and quiz yourself.</p>
+      </header>
+
+      <section class="controls">
+        <label for="chapterSelect">Chapter:</label>
+        <select id="chapterSelect" aria-label="Select psychology chapter"></select>
+        <button id="shuffleBtn" type="button">Shuffle Cards</button>
+      </section>
+
+      <section class="stats" aria-live="polite">
+        <p id="progressText">Card 0 of 0</p>
+      </section>
+
+      <section class="card-area">
+        <button id="flashcard" class="flashcard" type="button" aria-live="polite">
+          <span id="cardSideLabel" class="flashcard__side">Question</span>
+          <span id="cardContent" class="flashcard__content"></span>
+          <span class="flashcard__hint">Click to flip</span>
+        </button>
+      </section>
+
+      <section class="navigation">
+        <button id="prevBtn" type="button">Previous</button>
+        <button id="showAnswerBtn" type="button">Show Answer</button>
+        <button id="nextBtn" type="button">Next</button>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
